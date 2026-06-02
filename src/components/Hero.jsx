@@ -1,4 +1,5 @@
 import React from 'react';
+import ScrollReveal from './ScrollReveal';
 
 const Hero = () => {
   return (
@@ -13,21 +14,27 @@ const Hero = () => {
       ></div>
 
       <div className="relative z-20 max-w-5xl mx-auto px-4 text-center">
-        <h1 className="text-4xl md:text-7xl font-bold text-white tracking-tight leading-tight mb-6">
-          Liderança e Tecnologia em <br/>
-          <span className="text-orange-500">Soluções Siderúrgicas</span>
-        </h1>
-        <p className="text-lg md:text-xl text-slate-200 mb-10 max-w-3xl mx-auto font-light leading-relaxed">
-          Há 50 anos transformando a indústria com precisão, inovação e o compromisso de entregar excelência em cada projeto.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="bg-orange-600 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-orange-700 transition-all shadow-lg hover:shadow-orange-600/30">
-            Nossos Produtos
-          </button>
-          <button className="border-2 border-white text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-white hover:text-slate-900 transition-all">
-            Fale Conosco
-          </button>
-        </div>
+        <ScrollReveal delay={0.2}>
+          <h1 className="text-4xl md:text-7xl font-bold text-white tracking-tight leading-tight mb-6">
+            Liderança e Tecnologia em <br/>
+            <span className="text-orange-500">Soluções Siderúrgicas</span>
+          </h1>
+        </ScrollReveal>
+        <ScrollReveal delay={0.4}>
+          <p className="text-lg md:text-xl text-slate-200 mb-10 max-w-3xl mx-auto font-light leading-relaxed">
+            Há 50 anos transformando a indústria com precisão, inovação e o compromisso de entregar excelência em cada projeto.
+          </p>
+        </ScrollReveal>
+        <ScrollReveal delay={0.6}>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-orange-600 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-orange-700 transition-all shadow-lg hover:shadow-orange-600/30">
+              Nossos Produtos
+            </button>
+            <button className="border-2 border-white text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-white hover:text-slate-900 transition-all">
+              Fale Conosco
+            </button>
+          </div>
+        </ScrollReveal>
       </div>
 
       {/* Scroll Indicator */}

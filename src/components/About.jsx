@@ -1,11 +1,12 @@
 import React from 'react';
+import ScrollReveal from './ScrollReveal';
 
 const About = () => {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="order-2 lg:order-1">
+          <ScrollReveal direction="left" duration={0.8} distance={50} className="order-2 lg:order-1">
             <div className="relative">
               <img
                 src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80&w=1000"
@@ -18,16 +19,20 @@ const About = () => {
                 <p className="text-sm font-bold uppercase tracking-widest">Anos de <br/>Experiência</p>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
 
           <div className="order-1 lg:order-2">
-            <h2 className="text-orange-600 font-bold tracking-widest uppercase text-sm mb-4">Sobre a Vulcano</h2>
-            <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
-              Uma história de solidez e inovação constante na indústria.
-            </h3>
-            <p className="text-slate-600 text-lg mb-8 leading-relaxed">
-              Desde 1974, a Metalúrgica Vulcano Ltda vem se destacando por projetos especiais de engenharia e produtos patenteados que atendem às mais complexas necessidades da indústria siderúrgica e metalúrgica no Brasil e exterior.
-            </p>
+            <ScrollReveal direction="right" delay={0.2}>
+              <h2 className="text-orange-600 font-bold tracking-widest uppercase text-sm mb-4">Sobre a Vulcano</h2>
+              <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
+                Uma história de solidez e inovação constante na indústria.
+              </h3>
+            </ScrollReveal>
+            <ScrollReveal direction="right" delay={0.4}>
+              <p className="text-slate-600 text-lg mb-8 leading-relaxed">
+                Desde 1974, a Metalúrgica Vulcano Ltda vem se destacando por projetos especiais de engenharia e produtos patenteados que atendem às mais complexas necessidades da indústria siderúrgica e metalúrgica no Brasil e exterior.
+              </p>
+            </ScrollReveal>
             <div className="space-y-6">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1">

@@ -1,21 +1,23 @@
 import React from 'react';
-
-const ServiceCard = ({ title, description, icon }) => (
-  <div className="group bg-slate-50 p-8 rounded-xl hover:bg-slate-900 transition-all duration-500 hover:-translate-y-2 border border-slate-100 hover:shadow-2xl">
-    <div className="bg-white w-14 h-14 rounded-lg flex items-center justify-center mb-6 shadow-sm group-hover:bg-orange-600 transition-colors">
-      <span className="text-orange-600 group-hover:text-white transition-colors">{icon}</span>
-    </div>
-    <h4 className="text-xl font-bold text-slate-900 group-hover:text-white mb-4 transition-colors">{title}</h4>
-    <p className="text-slate-500 group-hover:text-slate-400 transition-colors text-sm leading-relaxed mb-6">
-      {description}
-    </p>
-    <a href="#" className="inline-flex items-center text-orange-600 font-bold text-sm group-hover:text-orange-400">
-      Saiba mais <span className="ml-2">→</span>
-    </a>
-  </div>
-);
-
 import SectionTitle from './SectionTitle';
+import ScrollReveal from './ScrollReveal';
+
+const ServiceCard = ({ title, description, icon, index }) => (
+  <ScrollReveal delay={index * 0.1} distance={30}>
+    <div className="group bg-slate-50 p-8 rounded-xl hover:bg-slate-900 transition-all duration-500 hover:-translate-y-2 border border-slate-100 hover:shadow-2xl">
+      <div className="bg-white w-14 h-14 rounded-lg flex items-center justify-center mb-6 shadow-sm group-hover:bg-orange-600 transition-colors">
+        <span className="text-orange-600 group-hover:text-white transition-colors">{icon}</span>
+      </div>
+      <h4 className="text-xl font-bold text-slate-900 group-hover:text-white mb-4 transition-colors">{title}</h4>
+      <p className="text-slate-500 group-hover:text-slate-400 transition-colors text-sm leading-relaxed mb-6">
+        {description}
+      </p>
+      <a href="#" className="inline-flex items-center text-orange-600 font-bold text-sm group-hover:text-orange-400">
+        Saiba mais <span className="ml-2">→</span>
+      </a>
+    </div>
+  </ScrollReveal>
+);
 
 const Services = () => {
   const services = [
@@ -38,7 +40,7 @@ const Services = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((s, idx) => (
-            <ServiceCard key={idx} {...s} />
+            <ServiceCard key={idx} index={idx} {...s} />
           ))}
         </div>
       </div>
